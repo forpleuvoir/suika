@@ -10,15 +10,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
 /**
- * 非阻塞的Http工具类
+ * 非阻塞的Http工具类 NoBlockingHttpUtil
  *
  * @author forpleuvoir
  * <p>#project_name suika
  * <p>#package forpleuvoir.suika.network.http
- * <p>#class_name NIOHttpUtil
+ * <p>#class_name NBHttpUtil
  * <p>#create_time 2021/5/31 21:48
  */
-public class NIOHttpUtil {
+public class NBHttpUtil {
     public static final String THREAD_NAME = "Suika-Http-Thread";
     private static final ThreadPoolExecutor executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
 
