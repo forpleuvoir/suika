@@ -76,9 +76,7 @@ public class NBHttpUtil {
     public static void post(String uri, @NonNull String params, Map<String, String> headers, Consumer<Result> consumer
     ) {
         execute(() -> {
-            execute(() -> {
                 consumer.accept(HttpUtil.post(uri, params, headers));
-            });
         });
     }
 
@@ -93,13 +91,13 @@ public class NBHttpUtil {
      */
     public static void put(String uri, @NonNull String params, Map<String, String> headers, Consumer<Result> consumer) {
         execute(() -> {
-            execute(() -> {
                 consumer.accept(HttpUtil.put(uri, params, headers));
-            });
         });
     }
 
-
+    /**
+     * 自定义名称的线程工厂
+     */
     private static class NamedThreadFactory implements ThreadFactory {
 
         private final ThreadFactory defaultThreadFactory = Executors.defaultThreadFactory();
